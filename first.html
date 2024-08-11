@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout</title>
+<style>
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e2a38, #2a3b4b); /* Stylish gradient background */
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff, 0 0 20px #0ff; /* Neon effect */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: calc(25% - 20px); /* Adjust card width to fit 4 per row with gaps */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-info {
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.card-info a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+}
+
+.card-info a:hover {
+    color: #006aff; /* Change link color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .card {
+        width: calc(33.333% - 20px); /* 3 per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 2 per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px); /* 1 per row */
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="name-display"></h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="ad0.jpg" alt="Image 1">
+                <div class="card-info">
+                    <a href="adpic.html">ABELLA DANGER</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="co0.jpg" alt="Image 2">
+                <div class="card-info">
+                    <a href="clpic.html">COCO LOVELOCK</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="dd0.jpg" alt="Image 3">
+                <div class="card-info">
+                    <a href="ddpic.html">DANI DANIELS</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="ej0.jpeg" alt="Image 4">
+                <div class="card-info">
+                    <a href="ejpic.html">ELSA JEAN</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="ew0.jpeg" alt="Image 5">
+                <div class="card-info">
+                    <a href="ewpic.html">EMILY WILLIS</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="lp0.jpg" alt="Image 6">
+                <div class="card-info">
+                    <a href="lppic.html">LENA PAUL</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="mk0.webp" alt="Image 7">
+                <div class="card-info">
+                    <a href="mkpic.html">MIA KHALIFA</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="sl0.jpg" alt="Image 8">
+                <div class="card-info">
+                    <a href="slpic.html">SOPHIA LEONE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+// Get the URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+// Extract the 'name' parameter
+const name = urlParams.get('name');
+
+// Display the name followed by "mcghfd"
+document.getElementById('name-display').textContent = `WELCOME ${name} MADARCHOD`;
+</script>
+
+</body>
+</html>
